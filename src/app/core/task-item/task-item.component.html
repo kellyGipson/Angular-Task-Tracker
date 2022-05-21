@@ -1,0 +1,17 @@
+<div
+  [ngClass]="task.reminder ? 'border-l-4 border-emerald-400' : ''"
+  class="bg-neutral-100 w-full p-4 my-1 flex justify-between items-center"
+  (dblclick)="onToggle(task)"
+>
+  <div>
+    <h3 class="font-bold text-lg">{{ task.text }}</h3>
+    <p class="text-lg">{{ task.day }}</p>
+  </div>
+  <fa-icon
+    id="taskDelete"
+    class="text-rose-700 active:scale-95"
+    [icon]="faRectangleXmark"
+    size="2x"
+    (click)="onDelete(task)"
+  ></fa-icon>
+</div>
