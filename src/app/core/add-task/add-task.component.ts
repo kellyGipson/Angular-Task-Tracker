@@ -8,7 +8,6 @@ import { Task } from 'src/app/Task';
   styleUrls: ['./add-task.component.css']
 })
 export class AddTaskComponent implements OnInit {
-
   text!: string;
   day!: string;
   reminder: boolean = false;
@@ -26,10 +25,16 @@ export class AddTaskComponent implements OnInit {
       return;
     }
 
-    const newTask = {
+    const task = {
       text: this.text,
       day: this.day,
       reminder: this.reminder,
     }
+
+    this.onSubmitTask.emit(task);
+
+    this.text = "";
+    this.day = "";
+    this.reminder = false;
   }
 }

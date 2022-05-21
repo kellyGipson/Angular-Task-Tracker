@@ -1,10 +1,7 @@
-// Libraries
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { faRectangleXmark } from "@fortawesome/free-solid-svg-icons"
 
-// Components / Assets
 import { Task } from 'src/app/Task';
-
 
 @Component({
   selector: 'app-task-item',
